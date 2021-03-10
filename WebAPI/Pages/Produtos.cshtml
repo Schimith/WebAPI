@@ -1,0 +1,59 @@
+﻿@page
+@model WebAPI.Pages.ProdutosModel
+@{
+}
+@{
+    ViewBag.Title = "Produtos";
+}
+
+<h2> Produtos </h2>
+
+<div id="gridEmployee" style="margin:20px auto;"></div>
+
+@section scripts {
+    <script type="text/javascript" src="https://jqwidgets.com/jquery-widgets-demo/scripts/jquery-1.11.1.min.js"></script>
+
+    <script type="text/javascript" src="https://jqwidgets.com/jquery-widgets-demo/jqwidgets/jqx-all.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://jqwidgets.com/jquery-widgets-demo/jqwidgets/styles/jqx.base.css" />
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            // In this part, you need to prepare your data
+            var source =
+            {
+                datatype: "json",
+
+                // Here you will declare all fields that must be used in the grid
+                datafields: [
+
+                    { name: 'id', type: 'number' },
+                    { name: 'nome', type: 'string' }
+
+                ],
+                // call the action which retrieve data employees in json format
+                url: '/api/produtos'
+            };
+
+            var dataAdapter = new $.jqx.dataAdapter(source);
+
+            // displaying data in the grid with jqxGrid
+            $("#gridEmployee").jqxGrid(
+                {
+                    width: 800,
+                    source: dataAdapter,
+                    pageable: true,
+                    sortable: true,
+
+                    columns: [
+
+                        { text: "ID Produto", datafield: "id" },
+                        { text: "Nome", datafield: "nome" }
+
+                    ]
+                });
+        });
+    </script>
+}  

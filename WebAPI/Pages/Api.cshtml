@@ -1,0 +1,176 @@
+﻿@page
+@model WebAPI.Pages.ApiModel
+@{
+    string host = "https://localhost:44372";
+}
+<style>
+    .Bold {
+        font-weight: bold;
+    }
+</style>
+
+<table border="1">
+    <tbody>
+        <tr>
+            <td> <span class="Bold">Tabela </span> </td>
+            <td> <span class="Bold">URL API </span> </td>
+            <td> <span class="Bold">Metodo </span> </td>
+            <td> <span class="Bold">Funcao </span> </td>
+        </tr>
+        <!--Cliente-->
+        <tr>
+            <td>Cliente</td>
+            <td> <a href="@host/api/clientes">@host/api/clientes</a> </td>
+            <td> HTTP GET </td>
+            <td> Listagem de registros</td>
+        </tr>
+        <tr>
+            <td>Cliente</td>
+            <td> <a href="@host/api/clientes/get?id=1">@host/api/clientes/get?id=1</a> </td>
+            <td> HTTP GET </td>
+            <td> Busca registro</td>
+        </tr>
+        <tr>
+            <td>Cliente</td>
+            <td> <a href="@host/api/clientes/add">@host/api/clientes/add</a> </td>
+            <td> HTTP POST </td>
+            <td> Adiciona registro</td>
+        </tr>
+        <tr>
+            <td>Cliente</td>
+            <td> <a href="@host/api/clientes/edit">@host/api/clientes/edit</a> </td>
+            <td> HTTP PUT </td>
+            <td> Atualiza registro</td>
+        </tr>
+        <tr>
+            <td>Cliente</td>
+            <td> <a href="@host/api/clientes/delete">@host/api/clientes/delete</a> </td>
+            <td> HTTP DELETE </td>
+            <td> Apaga registro</td>
+        </tr>
+        <!--Produto-->
+        <tr>
+            <td>Produto</td>
+            <td> <a href="@host/api/produtos">@host/api/produtos</a> </td>
+            <td> HTTP GET </td>
+            <td> Listagem de registros</td>
+        </tr>
+        <tr>
+            <td>Produto</td>
+            <td> <a href="@host/api/produtos/get?id=1">@host/api/produtos/get?id=1</a> </td>
+            <td> HTTP GET </td>
+            <td> Busca registro</td>
+        </tr>
+        <tr>
+            <td>Produto</td>
+            <td> <a href="@host/api/produtos/add">@host/api/produtos/add</a> </td>
+            <td> HTTP POST </td>
+            <td> Adiciona registro</td>
+        </tr>
+        <tr>
+            <td>Produto</td>
+            <td> <a href="@host/api/produtos/edit">@host/api/produtos/edit</a> </td>
+            <td> HTTP PUT </td>
+            <td> Atualiza registro</td>
+        </tr>
+        <tr>
+            <td>Produto</td>
+            <td> <a href="@host/api/produtos/delete">@host/api/produtos/delete</a> </td>
+            <td> HTTP DELETE </td>
+            <td> Apaga registro</td>
+        </tr>
+        <!--Pedidos-->
+        <tr>
+            <td>Pedido</td>
+            <td> <a href="@host/api/pedidos">@host/api/pedidos</a> </td>
+            <td> HTTP GET </td>
+            <td> Listagem de registros</td>
+        </tr>
+        <tr>
+            <td>Pedido</td>
+            <td> <a href="@host/api/pedidos/get?id=1">@host/api/pedidos/get?id=1</a> </td>
+            <td> HTTP GET </td>
+            <td> Busca registro</td>
+        </tr>
+        <tr>
+            <td>Pedido</td>
+            <td> <a href="@host/api/pedidos/add">@host/api/pedidos/add</a> </td>
+            <td> HTTP POST </td>
+            <td> Adiciona registro</td>
+        </tr>
+        <tr>
+            <td>Pedido</td>
+            <td> <a href="@host/api/pedidos/edit">@host/api/pedidos/edit</a> </td>
+            <td> HTTP PUT </td>
+            <td> Atualiza registro</td>
+        </tr>
+        <tr>
+            <td>Pedido</td>
+            <td> <a href="@host/api/pedidos/delete">@host/api/pedidos/delete</a> </td>
+            <td> HTTP DELETE </td>
+            <td> Apaga registro</td>
+        </tr>
+        <!--ClientePedido-->
+        <tr>
+            <td>ClientePedido</td>
+            <td> <a href="@host/api/clientes/pedidos">@host/api/clientes/pedidos</a> </td>
+            <td> HTTP GET </td>
+            <td> Listagem de registros</td>
+        </tr>
+        <tr>
+            <td>ClientePedido</td>
+            <td> <a href="@host/api/clientes/pedidos/get?id=1">@host/api/clientes/pedidos/get?id=1</a> </td>
+            <td> HTTP GET </td>
+            <td> Busca registro</td>
+        </tr>
+        <tr>
+            <td>ClientePedido</td>
+            <td> <a href="@host/api/clientes/pedidos/add">@host/api/clientes/pedidos/add</a> </td>
+            <td> HTTP POST </td>
+            <td> Adiciona registro</td>
+        </tr>
+        <tr>
+            <td>ClientePedido</td>
+            <td> <a href="@host/api/clientes/pedidos/edit">@host/api/clientes/pedidos/edit</a> </td>
+            <td> HTTP PUT </td>
+            <td> Atualiza registro</td>
+        </tr>
+        <tr>
+            <td>ClientePedido</td>
+            <td> <a href="@host/api/clientes/pedidos/delete">@host/api/clientes/pedidos/delete</a> </td>
+            <td> HTTP DELETE </td>
+            <td> Apaga registro</td>
+        </tr>
+        <!--PedidoProduto-->
+        <tr>
+            <td>PedidoProduto</td>
+            <td> <a href="@host/api/pedidos/produtos">@host/api/pedidos/produtos</a> </td>
+            <td> HTTP GET </td>
+            <td> Listagem de registros</td>
+        </tr>
+        <tr>
+            <td>PedidoProduto</td>
+            <td> <a href="@host/api/pedidos/produtos/get?id=1">@host/api/pedidos/produtos/get?id=1</a> </td>
+            <td> HTTP GET </td>
+            <td> Busca registro</td>
+        </tr>
+        <tr>
+            <td>PedidoProduto</td>
+            <td> <a href="@host/api/pedidos/produtos/add">@host/api/pedidos/produtos/add</a> </td>
+            <td> HTTP POST </td>
+            <td> Adiciona registro</td>
+        </tr>
+        <tr>
+            <td>PedidoProduto</td>
+            <td> <a href="@host/api/pedidos/produtos/edit">@host/api/pedidos/produtos/edit</a> </td>
+            <td> HTTP PUT </td>
+            <td> Atualiza registro</td>
+        </tr>
+        <tr>
+            <td>PedidoProduto</td>
+            <td> <a href="@host/api/pedidos/produtos/delete">@host/api/pedidos/produtos/delete</a> </td>
+            <td> HTTP DELETE </td>
+            <td> Apaga registro</td>
+        </tr>
+    </tbody>
+</table>
