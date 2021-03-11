@@ -1,5 +1,5 @@
 # WebAPI
-Projeto em .NET + API + SQL Server
+Projeto em .NET Core 3.1 + API + SQL Server
 
 1º Criar banco de dados
 
