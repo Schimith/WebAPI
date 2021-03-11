@@ -1,12 +1,12 @@
 ﻿@page
-@model WebAPI.Pages.PedidosModel
+@model WebAPI.Pages.PedidoProdutoModel
 @{
 }
 @{
-    ViewBag.Title = "Pedidos";
+    ViewBag.Title = "PedidoProduto";
 }
 
-<h2> Pedidos </h2>
+<h2> PedidoProduto </h2>
 
 <div id="gridEmployee" style="margin:20px auto;"></div>
 
@@ -30,12 +30,12 @@
                 datafields: [
 
                     { name: 'id', type: 'number' },
-                    { name: 'datapedido', type: 'string' },
-                    { name: 'total', type: 'number' }
+                    { name: 'pedido', type: 'number' },
+                    { name: 'produto', type: 'number' }
 
                 ],
                 // call the action which retrieve data employees in json format
-                url: '/api/pedidos'
+                url: '/api/pedidos/produtos'
             };
 
             var dataAdapter = new $.jqx.dataAdapter(source);
@@ -50,10 +50,9 @@
 
                     columns: [
 
-                        { text: "ID Pedido", datafield: "id" },
-                        { text: "Data do Pedido", datafield: "datapedido" },
-                        { text: "Total", datafield: "total" }
-
+                        { text: "ID PedidoProduto", datafield: "id" },
+                        { text: "ID Pedido", datafield: "pedido" },
+                        { text: "ID Produto", datafield: "produto" }
                     ]
                 });
         });
